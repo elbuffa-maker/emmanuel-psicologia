@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmanuel Martinez Buffa - Psicólogo | Desarrollo Personal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23f4a6c1'/%3E%3Ctext x='50' y='60' font-size='40' font-weight='bold' text-anchor='middle' fill='%23333'%3EEM%3C/text%3E%3C/svg%3E" alt="Logo" class="logo-img">
+                <span>Emmanuel</span>
+            </div>
+            <nav class="nav">
+                <a href="#servicios">Servicios</a>
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Porque estar mejor siempre es posible</h1>
+            <p class="hero-subtitle">Psicólogo especializado en desarrollo personal y bienestar mental. Acompañamiento profesional para empresarios y personas que buscan crecer.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="openModal('therapy')">Agendar Sesión</button>
+                <button class="btn btn-secondary" onclick="openModal('advertising')">Publicidad & Colaboraciones</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <h2>Mis Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <h3>Sesiones de Terapia</h3>
+                    <p>Sesiones de 45 minutos enfocadas en desarrollo personal, manejo de ansiedad y depresión leve.</p>
+                    <p class="precio">USD $40 por sesión</p>
+                </div>
+                <div class="servicio-card">
+                    <h3>Publicidad & Colaboraciones</h3>
+                    <p>Oportunidades de colaboración pagada con empresas y profesionales de salud mental.</p>
+                    <p class="precio">Presupuesto personalizado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="sobre-mi">
+        <div class="container">
+            <h2>Sobre mí</h2>
+            <div class="bio-content">
+                <p>Soy <strong>Psicólogo Licenciado</strong> por la Universidad de Buenos Aires, especializado en desarrollo personal y bienestar mental.</p>
+                <p>Mi enfoque se centra en acompañar a empresarios y personas que buscan mejorar su calidad de vida y desarrollarse personalmente. Utilizo técnicas de Terapia Cognitivo Conductual (TCC) para trabajar con ansiedad y depresión leve.</p>
+                <p>Creo que <strong>estar mejor siempre es posible</strong>, y mi objetivo es ayudarte a alcanzar tu mejor versión.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>¿Listo para dar el primer paso? Contáctame para agendar tu sesión o explorar oportunidades de colaboración.</p>
+            <div class="contacto-buttons">
+                <a href="https://wa.me/5491123456789" class="btn btn-primary" target="_blank">WhatsApp</a>
+                <a href="https://instagram.com/martinezbuffaok" class="btn btn-secondary" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Reserva -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Agendar Sesión</h2>
+            <form id="bookingForm" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono / WhatsApp</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div id="therapyFields">
+                    <div class="form-group">
+                        <label for="date">Fecha</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Hora (Viernes 9-19hs)</label>
+                        <select id="time" name="time">
+                            <option value="">Selecciona una hora</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="reason">Motivo de consulta</label>
+                        <textarea id="reason" name="reason" rows="3"></textarea>
+                    </div>
+                </div>
+                <div id="advertisingFields" style="display:none;">
+                    <div class="form-group">
+                        <label for="instagramUser">Usuario de Instagram</label>
+                        <input type="text" id="instagramUser" name="instagramUser">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Detalles de la colaboración</label>
+                        <textarea id="message" name="message" rows="3"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Emmanuel Martinez Buffa. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -33,32 +33,16 @@ window.onclick = function(event) {
 
 function handleSubmit(event) {
     event.preventDefault();
-    
     const form = document.getElementById('reservaForm');
     const formData = new FormData(form);
-    const tipo = formData.get('tipoReserva');
-    
-    let mensaje = `Nueva solicitud de ${tipo === 'terapia' ? 'terapia' : 'publicidad'}:\n\n`;
-    
-    for (let [key, value] of formData.entries()) {
-        if (key !== 'tipoReserva') {
-            mensaje += `${key}: ${value}\n`;
-        }
-    }
-    
-    // Guardar en localStorage
     let reservas = JSON.parse(localStorage.getItem('reservas') || '[]');
     reservas.push({
-        tipo: tipo,
+        tipo: formData.get('tipoReserva'),
         datos: Object.fromEntries(formData),
         fecha: new Date().toISOString()
     });
     localStorage.setItem('reservas', JSON.stringify(reservas));
-    
-    // Mostrar confirmación
     alert('¡Gracias! Tu solicitud ha sido registrada. Pronto nos pondremos en contacto contigo.');
-    
-    // Limpiar formulario
     form.reset();
     closeModal();
 }

@@ -10,6 +10,8 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--w
 .nav-links { display: flex; list-style: none; gap: 2rem; }
 .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s; }
 .nav-links a:hover { color: var(--primary); }
+.logo-brain { flex: 1; text-align: center; }
+.logo-brain img { height: 80px; width: auto; object-fit: contain; }
 
 .hero { padding: 6rem 0; background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 100%); }
 .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }

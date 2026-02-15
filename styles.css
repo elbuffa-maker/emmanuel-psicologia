@@ -28,6 +28,14 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--w
 .about-text h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--secondary); margin-bottom: 1.5rem; }
 .about-text p { color: var(--text-light); margin-bottom: 1.5rem; font-size: 1rem; line-height: 1.8; }
 
+.why-choose { padding: 6rem 0; background: var(--white); }
+.why-choose h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--secondary); text-align: center; margin-bottom: 3rem; }
+.why-items { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
+.why-item { padding: 2rem; background: var(--primary-light); border-radius: 15px; border-left: 4px solid var(--primary); transition: all 0.3s; }
+.why-item:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(244, 166, 193, 0.2); }
+.why-item h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--secondary); margin-bottom: 1rem; }
+.why-item p { color: var(--text-light); font-size: 0.95rem; line-height: 1.8; }
+
 .services { padding: 6rem 0; background: var(--primary-light); }
 .services h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--secondary); text-align: center; margin-bottom: 3rem; }
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }

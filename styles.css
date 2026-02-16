@@ -6,19 +6,21 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--w
 
 .navbar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1.5rem 0; position: sticky; top: 0; z-index: 100; }
 .nav-content { display: flex; justify-content: space-between; align-items: center; }
-.logo-text { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--primary); line-height: 1.2; }
+.logo-text { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; color: var(--primary); line-height: 1.1; letter-spacing: 0.5px; }
 .nav-links { display: flex; list-style: none; gap: 2rem; }
 .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s; }
 .nav-links a:hover { color: var(--primary); }
 .logo-brain { flex: 1; text-align: center; }
 .logo-brain img { height: 80px; width: auto; object-fit: contain; }
 
-.hero { padding: 6rem 0; background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 100%); }
+.hero { padding: 8rem 0; background: linear-gradient(135deg, var(--primary-light) 0%, #fef3f7 50%, var(--white) 100%); position: relative; overflow: hidden; }
 .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
 .hero-text h1 { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; color: var(--secondary); margin-bottom: 1rem; line-height: 1.2; }
 .hero-text p { font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem; }
 .cta-button { background: var(--primary); color: var(--white); border: none; padding: 1rem 2rem; font-size: 1rem; font-weight: 600; border-radius: 50px; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 15px rgba(244, 166, 193, 0.3); }
-.cta-button:hover { background: var(--primary-dark); transform: translateY(-2px); }
+.cta-button:hover { background: var(--primary-dark); transform: translateY(-3px); box-shadow: 0 8px 25px rgba(244, 166, 193, 0.4); }
+.hero-text h1 { animation: fadeInUp 0.8s ease-out; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 .hero-img { width: 100%; max-width: 400px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
 
 .about { padding: 6rem 0; background: var(--white); }
@@ -41,7 +43,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--w
 .services { padding: 6rem 0; background: var(--primary-light); }
 .services h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--secondary); text-align: center; margin-bottom: 3rem; }
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-.service-card { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: all 0.3s; }
+.service-card { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.06); transition: all 0.3s; border: 1px solid rgba(244, 166, 193, 0.1); }
 .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(244, 166, 193, 0.2); }
 .service-image { width: 100%; height: 250px; overflow: hidden; background: #f5f5f5; }
 .service-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
@@ -49,7 +51,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--w
 .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--secondary); padding: 1.5rem 1.5rem 0.5rem; }
 .service-card p { color: var(--text-light); padding: 0 1.5rem 1.5rem; font-size: 0.95rem; }
 .reserve-button { background: var(--primary); color: var(--white); border: none; padding: 0.8rem 1.5rem; margin: 0 1.5rem 1.5rem; font-size: 0.95rem; font-weight: 600; border-radius: 50px; cursor: pointer; transition: all 0.3s; width: calc(100% - 3rem); }
-.reserve-button:hover { background: var(--primary-dark); transform: translateY(-2px); }
+.reserve-button:hover { background: var(--primary-dark); transform: translateY(-3px); box-shadow: 0 6px 20px rgba(244, 166, 193, 0.3); }
 
 .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); animation: fadeIn 0.3s; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }

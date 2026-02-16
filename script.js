@@ -32,7 +32,8 @@ window.onclick = function(event) {
 }
 
 function handleSubmit(event) {
-    event.preventDefault();
+    // Formspree maneja el envío automáticamente
+    // Solo guardamos en localStorage como respaldo
     const form = document.getElementById('reservaForm');
     const formData = new FormData(form);
     let reservas = JSON.parse(localStorage.getItem('reservas') || '[]');
@@ -42,9 +43,6 @@ function handleSubmit(event) {
         fecha: new Date().toISOString()
     });
     localStorage.setItem('reservas', JSON.stringify(reservas));
-    alert('¡Gracias! Tu solicitud ha sido registrada. Pronto nos pondremos en contacto contigo.');
-    form.reset();
-    closeModal();
 }
 
 function showContacto() {

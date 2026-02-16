@@ -133,8 +133,11 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <h2 id="modalTitle">Reservar Sesión</h2>
-            <form id="reservaForm" onsubmit="handleSubmit(event)">
+            <form id="reservaForm" action="https://formspree.io/f/meqzqkqp" method="POST" onsubmit="handleSubmit(event)">
                 <input type="hidden" id="tipoReserva" name="tipoReserva" value="">
+                <input type="hidden" name="_next" value="https://mbuffaok.vercel.app/">
+                <input type="hidden" name="_subject" value="Nueva solicitud de reserva">
+                <input type="hidden" name="_captcha" value="false">
                 
                 <div class="form-group">
                     <label for="nombre">Nombre Completo *</label>
